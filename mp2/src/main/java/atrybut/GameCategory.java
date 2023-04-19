@@ -35,6 +35,9 @@ public class GameCategory {
         return games;
     }
 
+    public void removeAssociation(GameAssociation association) {
+        associations.remove(association);
+    }
     public Game findGame(String name) throws Exception {
         for (GameAssociation association : associations) {
             if (association.getGame().getName().equals(name)) {

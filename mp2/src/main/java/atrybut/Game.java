@@ -35,6 +35,10 @@ public class Game {
         return categories;
     }
 
+    public void removeAssociation(GameAssociation association) {
+        associations.remove(association);
+    }
+
     @Override
     public String toString() {
         return "Game [id=" + id + ", name=" + name + "]";

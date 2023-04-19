@@ -25,5 +25,17 @@ public class TestClasse {
             System.out.println(" " + GameCategory.findCategory(game2.categoryIds.get(i)).categoryName);
 
         }
+        System.out.println("po usunieciu kateogorii");
+        game1.deleteCategory(category1);
+        game1.deleteCategory(category2);
+//        game1.deleteCategory(category3);
+        System.out.println(game1);
+        for (int i = 0; i < game1.categoryIds.size(); i++) {
+
+            System.out.println(" " + GameCategory.findCategory(game1.categoryIds.get(i)).categoryName);
+
+        }
+
     }
+
 }

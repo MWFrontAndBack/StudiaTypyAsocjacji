@@ -12,6 +12,10 @@ public class GameAssociation {
         category.addAssociation(this);
     }
 
+    public void removeAssociation(){
+        game.removeAssociation(this);
+        category.removeAssociation(this);
+    }
     public Game getGame() {
         return game;
     }

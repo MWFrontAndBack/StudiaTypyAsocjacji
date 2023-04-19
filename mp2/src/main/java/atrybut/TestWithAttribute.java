@@ -1,5 +1,6 @@
 package atrybut;
 
+import java.util.List;
 import java.util.Set;
 
 public class TestWithAttribute {
@@ -18,13 +19,20 @@ public class TestWithAttribute {
         new GameAssociation(game3, adventureCategory),
         new GameAssociation(game3, puzzleCategory));
 
-        associations.forEach(System.out::println);
+//        associations.forEach(System.out::println);
 
         // testowanie get get all games
         System.out.println("Gry dla kategorii " + actionCategory.getName());
         Set<Game> games = actionCategory.getGames();
         System.out.println(games);
+        System.out.println("gra " + game3.getName());
+        System.out.println(game3.getCategories());
 
+        List<GameAssociation> list = associations.stream().toList();
+        GameAssociation gameAssociation = list.get(3);
+        gameAssociation.removeAssociation();
+
+        System.out.println(game3.getCategories());
 
 
     }
